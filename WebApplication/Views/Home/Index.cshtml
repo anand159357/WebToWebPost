@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>In Client page</h1>
+	@using(Html.BeginForm("CallToServer", "Home")){
+		<input type="text" name="field"/>
+		<input type="submit"/>
+	}
+</div>
+
+<div class="row">
+<input type="button"
+         value="Redirect to server"
+         onclick="location.href='@Url.Action("CallToServer", "Home")'" />
+		 </div> 
